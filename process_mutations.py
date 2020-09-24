@@ -88,7 +88,7 @@ def process_events_file( events_file, patientWhitelist, geneToCases, patientToMu
     # Parse the events file
     events, patients = set(), set()
     with open(events_file, 'r') as IN:
-        arrs = [ l.rstrip('\n').split('\t') for l in IN if not l.startswith('#') ]
+        arrs = [ l.rstrip('\r\n').split('\t') for l in IN if not l.startswith('#') ]
         for arr in arrs:
             # Skip patients that aren't whitelisted
             patient, mutations = arr[0], set(arr[1:])
