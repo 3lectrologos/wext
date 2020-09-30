@@ -49,7 +49,7 @@ def create_tbl_header( k ):
 def output_enumeration_table(args, k, setToPval, setToRuntime, setToFDR, setToObs, fdr_threshold=1 ):
     is_permutational = nameToTest[args.test] == RCE
     extension = 'json' if args.json_format else 'tsv'
-    with open('{}-k{}.{}'.format(args.output_prefix, k, extension), 'w') as OUT:
+    with open('{}.{}'.format(args.output_prefix, extension), 'w') as OUT:
         # Tab-separated
         if not args.json_format:
             # Construct the rows
