@@ -63,7 +63,6 @@ def output_enumeration_table(args, k, setToPval, setToRuntime, setToFDR, setToOb
 
             # Create the header
             method_paren = '' if is_permutational else ' ({})'.format(args.method)
-            k = len(rows[0][0].split(', '))
             tbl_header = create_tbl_header( k )
             header = 'Gene set\t{0}{1} P-value\t{0}{1} FDR\t{0}{1} '\
                      'Runtime\tT\tZ\t{2}'.format(args.test, method_paren, tbl_header)
